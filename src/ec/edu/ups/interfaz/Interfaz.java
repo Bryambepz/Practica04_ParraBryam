@@ -9,6 +9,7 @@ import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.FlowLayout;
 import java.awt.Frame;
+import java.awt.GridLayout;
 import java.awt.Label;
 import java.awt.Panel;
 /**
@@ -29,17 +30,27 @@ public class Interfaz {
         Button boton4=new Button("Eliminar Telefono");
         Button boton5=new Button("Listar Telefonos");
         //Layouts
+        GridLayout tabla=new GridLayout(5,0);
         BorderLayout borde=new BorderLayout();
-        FlowLayout posicion=new FlowLayout();
+        FlowLayout posicion=new FlowLayout(FlowLayout.CENTER);
         //Panel
-        Panel panelPrincipal=new Panel();
-        Panel panelsub=new Panel();
+        Panel panelPrincipal=new Panel(borde);
+        Panel panelsub=new Panel(tabla);
+        Panel panelsub2=new Panel(posicion);
         //Label
         Label Titulo=new Label("Registro de telefono");
-        //Agregar
-        panelsub.add(Titulo);
-        panelPrincipal.add(panelsub, BorderLayout.CENTER);
-        ventanaRegistro.add(panelPrincipal);
+        //Agregamos los botones
+        panelsub.add(boton1);
+        panelsub.add(boton2);
+        panelsub.add(boton3);
+        panelsub.add(boton4);
+        panelsub.add(boton5);
+        panelsub2.add(Titulo, posicion);
+        //Agregar subpaneles al panel principal
+        panelPrincipal.add(panelsub2,BorderLayout.NORTH);
+        panelPrincipal.add(panelsub);
+        //Agregar panel principal a la ventana
+        ventanaRegistro.add(panelPrincipal,BorderLayout.CENTER);
         
         
         ventanaRegistro.setVisible(true);
