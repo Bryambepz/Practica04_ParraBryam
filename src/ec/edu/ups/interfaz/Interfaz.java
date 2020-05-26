@@ -13,6 +13,7 @@ import java.awt.Frame;
  */
 public class Interfaz {
     public static void main(String[] args) {
+        //Crear la ventana
         Frame ventanaRegistro=new Frame();
         ventanaRegistro.setTitle("REgistro");
         ventanaRegistro.setLocation(500, 50);
