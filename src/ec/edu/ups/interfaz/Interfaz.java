@@ -20,7 +20,7 @@ public class Interfaz {
     public static void main(String[] args) {
         //Crear la ventana
         Frame ventanaRegistro=new Frame();
-        ventanaRegistro.setTitle("Registro");
+        ventanaRegistro.setTitle("Menu Teléfono");
         ventanaRegistro.setLocation(500, 50);
         ventanaRegistro.setSize(600, 800);
         //Botones
