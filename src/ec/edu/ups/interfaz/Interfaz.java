@@ -18,6 +18,7 @@ import java.awt.Panel;
  */
 public class Interfaz {
     public static void main(String[] args) {
+        //interfaz
         //Crear la ventana
         Frame ventanaRegistro=new Frame();
         ventanaRegistro.setTitle("Menu Teléfono");
